@@ -26,7 +26,7 @@ flutter:
     implements: video_thumbnail
     platforms:
       android:
-        package: public.video_thumbnail
+        package: porada.video_thumbnail
         pluginClass: VideoThumbnailPlugin
       ios:
         pluginClass: VideoThumbnailPlugin

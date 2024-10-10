@@ -1,4 +1,4 @@
-group 'public.video_thumbnail'
+group 'porada.video_thumbnail'
 version '1.0-SNAPSHOT'
 
 buildscript {

@@ -1,4 +1,4 @@
-package public.video_thumbnail;
+package porada.video_thumbnail;
 
 import android.content.Context;
 import android.graphics.Bitmap;
