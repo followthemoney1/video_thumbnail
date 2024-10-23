@@ -1,18 +1,22 @@
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = 'video_thumbnail_new'
   s.version          = '0.0.2'
-  s.summary          = 'A new flutter plugin project.'
-  s.description      = "<<-DESC"
-  s.homepage         = 'http://example.com'
-  s.license          = { :type => 'BSD' }
+  s.summary          = 'A Flutter plugin to generate video thumbnails.'
+  s.description      = <<-DESC
+This Flutter plugin generates video thumbnails from video files.
+It supports both Android and iOS platforms.
+  DESC
+  s.homepage         = 'https://github.com/your_company/video_thumbnail_new'
+  s.license          = { :type => 'BSD', :file => 'LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.ios.deployment_target = '11.0'
+  
   # Framework linking is handled by Flutter tooling, not CocoaPods.
   # Add a placeholder to satisfy `s.dependency 'Flutter'` plugin podspecs.
-  s.vendored_frameworks = 'path/to/nothing'
+  s.dependency 'Flutter'
+  
+  # Remove or update vendored frameworks if applicable
+  # Remove 'vendored_frameworks' if not used
+  # s.vendored_frameworks = 'path/to/framework'
 end
-
