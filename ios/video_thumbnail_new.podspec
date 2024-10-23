@@ -18,5 +18,5 @@ It supports both Android and iOS platforms.
   
   # Remove or update vendored frameworks if applicable
   # Remove 'vendored_frameworks' if not used
-  # s.vendored_frameworks = 'path/to/framework'
+  s.vendored_frameworks = 'path/to/nothing'
 end
