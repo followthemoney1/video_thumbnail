@@ -5,9 +5,7 @@ Pod::Spec.new do |s|
   s.name             = 'video_thumbnail_new'
   s.version          = '0.0.2'
   s.summary          = 'A new flutter plugin project.'
-  s.description      = <<-DESC
-A new flutter plugin project.
-                       DESC
+  s.description      = "<<-DESC"
   s.homepage         = 'http://example.com'
   s.license          = { :type => 'BSD' }
   s.author           = { 'Your Company' => 'email@example.com' }
@@ -17,3 +15,4 @@ A new flutter plugin project.
   # Add a placeholder to satisfy `s.dependency 'Flutter'` plugin podspecs.
   s.vendored_frameworks = 'path/to/nothing'
 end
+
