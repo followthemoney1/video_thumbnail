@@ -9,17 +9,11 @@ Pod::Spec.new do |s|
 A new flutter plugin project.
                        DESC
   s.homepage         = 'http://example.com'
-  s.license          = { :file => '../LICENSE' }
+  s.license          = { :type => 'BSD' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
-  s.pod_target_xcconfig = {
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libwebp/**'
-  }
-  s.dependency 'Flutter'
-  s.dependency 'libwebp'
-
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '11.0'
+  # Framework linking is handled by Flutter tooling, not CocoaPods.
+  # Add a placeholder to satisfy `s.dependency 'Flutter'` plugin podspecs.
+  s.vendored_frameworks = 'path/to/nothing'
 end
-
