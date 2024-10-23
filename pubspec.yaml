@@ -29,7 +29,7 @@ flutter:
         package: porada.video_thumbnail
         pluginClass: VideoThumbnailPlugin
       ios:
-        pluginClass: VideoThumbnailPlugin
+        pluginClass: VideoThumbnailPluginNew
       web:
         pluginClass: VideoThumbnailWeb
         fileName: video_thumbnail_web.dart

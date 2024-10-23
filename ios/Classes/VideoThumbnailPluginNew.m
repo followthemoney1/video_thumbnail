@@ -1,4 +1,4 @@
-#import "VideoThumbnailPlugin.h"
+#import "VideoThumbnailPluginNew.h"
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
@@ -14,7 +14,7 @@
 #import <libwebp/mux.h>
 #endif
 
-@implementation VideoThumbnailPlugin
+@implementation VideoThumbnailPluginNew
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
     FlutterMethodChannel* channel = [FlutterMethodChannel
                                      methodChannelWithName:@"plugins.justsoft.xyz/video_thumbnail"
