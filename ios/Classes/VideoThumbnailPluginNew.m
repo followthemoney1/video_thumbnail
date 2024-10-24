@@ -19,7 +19,7 @@
     FlutterMethodChannel* channel = [FlutterMethodChannel
                                      methodChannelWithName:@"plugins.justsoft.xyz/video_thumbnail"
                                      binaryMessenger:[registrar messenger]];
-    VideoThumbnailPlugin* instance = [[VideoThumbnailPlugin alloc] init];
+    VideoThumbnailPluginNew* instance = [[VideoThumbnailPluginNew alloc] init];
     [registrar addMethodCallDelegate:instance channel:channel];
 }
 
@@ -47,7 +47,7 @@
 
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
             //Background Thread
-            result([VideoThumbnailPlugin generateThumbnail:url headers:headers format:format maxHeight:maxh maxWidth:maxw timeMs:timeMs quality:quality]);
+            result([VideoThumbnailPluginNew generateThumbnail:url headers:headers format:format maxHeight:maxh maxWidth:maxw timeMs:timeMs quality:quality]);
         });
         
     } else if ([@"file" isEqualToString:call.method]) {
@@ -58,7 +58,7 @@
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
             //Background Thread
            
-            NSData *data = [VideoThumbnailPlugin generateThumbnail:url headers:headers format:format maxHeight:maxh maxWidth:maxw timeMs:timeMs quality:quality];
+            NSData *data = [VideoThumbnailPluginNew generateThumbnail:url headers:headers format:format maxHeight:maxh maxWidth:maxw timeMs:timeMs quality:quality];
             NSString *ext = ( (format == 0 ) ? @"jpg" : ( format == 1 ) ? @"png" : @"webp" );
             NSURL *thumbnail = [[url URLByDeletingPathExtension] URLByAppendingPathExtension:ext];
 
