@@ -13,8 +13,11 @@ It supports both Android and iOS platforms.
   s.source_files     = 'Classes/**/*.{h,m}' # Adjust the path to your source files
   s.public_header_files = 'Classes/**/*.h' # Adjust the path to your public headers
 
+  s.pod_target_xcconfig = {
+    'USER_HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libwebp/**'
+  }
   s.dependency 'Flutter'
-  s.platform         = :ios, '12.0'
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-  s.resource_bundles = {'video_thumbnail_new_resources' => ['video_thumbnail/ios/Assets/*.xcassets']} # Adjust the path to your resources
+  s.dependency 'libwebp'
+
+  s.ios.deployment_target = '13.0'
 end
