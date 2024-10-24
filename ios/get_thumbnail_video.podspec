@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'video_thumbnail_new'
+  s.name             = 'get_thumbnail_video'
   s.version          = '0.0.3'
   s.summary          = 'A Flutter plugin to generate video thumbnails.'
   s.description      = <<-DESC
