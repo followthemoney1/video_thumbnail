@@ -6,17 +6,14 @@ Pod::Spec.new do |s|
 This Flutter plugin generates video thumbnails from video files.
 It supports both Android and iOS platforms.
   DESC
-  s.homepage         = 'https://github.com/your_company/video_thumbnail_new'
+  s.homepage         = 'https://github.com/followthemoney1/video_thumbnail'
   s.license          = { :type => 'BSD', :file => 'LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Your Company' => 'info@porada.app' }
   s.source           = { :path => '.' }
-  s.ios.deployment_target = '11.0'
-  
-  # Framework linking is handled by Flutter tooling, not CocoaPods.
-  # Add a placeholder to satisfy `s.dependency 'Flutter'` plugin podspecs.
+  s.source_files     = 'ios/Classes/**/*.{h,m}' # Adjust the path to your source files
+  s.public_header_files = 'ios/Classes/**/*.h' # Adjust the path to your public headers
   s.dependency 'Flutter'
-  
-  # Remove or update vendored frameworks if applicable
-  # Remove 'vendored_frameworks' if not used
-  s.vendored_frameworks = 'path/to/nothing'
+  s.platform         = :ios, '12.0'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  s.resource_bundles = {'video_thumbnail_new_resources' => ['video_thumbnail/ios/Assets/*.xcassets']} # Adjust the path to your resources
 end
